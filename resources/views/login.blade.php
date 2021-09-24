@@ -1,6 +1,5 @@
 @extends('base')
 
-@include('nav-bar')
 
 @section('content')
 
@@ -8,7 +7,7 @@
 <div class="py-5 container">
     <div class="col-md-4 offset-md-4">
         <div class="card">
-            <div class="card-header bg-primary text-white">
+            <div class="card-header bg-black text-white">
                 <h3 class="title text-center">User Login</h3>
             </div>
             <div class="card-body">
@@ -22,7 +21,7 @@
                         <label for="password">Password</label>
                         <input type="password" name="password" class="form-control">
                     </div>
-                    <button class="btn btn-primary" type="submit">Login</button>
+                    <button class="btn btn-primary " type="submit">Login</button>
                 </form>
             </div>
         </div>

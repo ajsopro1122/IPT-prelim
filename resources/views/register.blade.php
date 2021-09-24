@@ -1,14 +1,12 @@
 @extends('base')
 
-@include('nav-bar')
-
 @section('content')
 
 <div class="py-5 container">
     <div class="col-md-4 offset-md-4">
         <div class="card">
-            <div class="card-header bg-primary text-white">
-                <h3 class="title">User Registration</h3>
+            <div class="card-header bg-black text-white">
+                <h3 class="title text-center">User Registration</h3>
             </div>
             <div class="card-body">
                 <form action="{{url('/register')}}" method="post">
@@ -29,7 +27,7 @@
                         <label for="password">Password</label>
                         <input type="password" name="password" class="form-control">
                     </div>
-                    <button class="btn btn-primary" type="submit">Register</button>
+                    <button class="btn btn-primary " type="submit">Register</button>
                 </form>
             </div>
         </div>

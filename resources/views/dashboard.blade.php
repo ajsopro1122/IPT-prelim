@@ -1,7 +1,5 @@
 @extends('base')
 
-@include('nav-bar')
-
 @section('content')
 
     <div class="py-5 container">
