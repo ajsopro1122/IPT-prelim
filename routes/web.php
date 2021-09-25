@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function(){
-    return view('base');
+    return view('landingpage');
     
 });
 
@@ -30,5 +30,7 @@ Route::get('/verification/{user}/{token}', [AuthController::class, 'verification
 Route::get('/dashboard', function(){
     return view('dashboard');
 })->middleware('auth');
+
+
 
 Route::get('/sms', [SmsController::class, 'index']);

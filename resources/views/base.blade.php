@@ -10,9 +10,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
     <title>IPT System</title>
+
 </head>
 <body>
+    
         @include('nav-bar')
+        
 
             @if (session('Error'))
                 <div class="alert alert-danger">
@@ -47,6 +50,7 @@
                 </div>
                 
             @endif
+        
 
 
 
