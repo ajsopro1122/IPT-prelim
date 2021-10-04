@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ItemController;
 use App\Http\Controllers\SmsController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,3 +35,11 @@ Route::get('/dashboard', function(){
 
 
 Route::get('/sms', [SmsController::class, 'index']);
+
+Route::get('/dashboard', [ItemController::class, 'index']);
+Route::get('/dashboard/new', [ItemController::class, 'create']);
+Route::post('/dashboard', [ItemController::class, 'store']);
+Route::get('/dashboard/edit/{item}', [ItemController::class, 'edit']);
+Route::patch('/dashboard/edit/{item}', [ItemController::class, 'update']);
+Route::get('/dashboard/delete/{item}', [ItemController::class, 'delete']);
+Route::delete('/dashboard/delete/{item}', [ItemController::class, 'destroy']);

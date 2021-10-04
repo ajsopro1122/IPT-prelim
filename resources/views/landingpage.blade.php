@@ -16,7 +16,7 @@
     
     <div class="container">
     <div class="head" style="text-align: center;">
-        <h1>AJ Vape</h1>
+        <h1 class="text-white">ALGHOST</h1>
     </div>
 
     <br>
