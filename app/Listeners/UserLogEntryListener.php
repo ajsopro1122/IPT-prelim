@@ -5,6 +5,8 @@ namespace App\Listeners;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\DB;
+use App\Events\UserLogEntryEvent;
+use App\Models\Logs;
 
 class UserLogEntryListener
 {
@@ -24,12 +26,11 @@ class UserLogEntryListener
      * @param  object  $event
      * @return void
      */
-    public function handle($event)
+    public function handle(UserLogEntryEvent $event)
     {
-        DB::table('logs')->
-        insert([
-            'user_id'   => auth()->user()->id,
-            'log_entry'  => $event->log,
+        Logs::create([
+            'user_id'   => $event->user_id,
+            'log_entry' => $event->log_entry
         ]);
     }
 }

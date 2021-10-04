@@ -14,15 +14,16 @@ class UserLogEntryEvent
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $log;
+    public $user_id, $log_entry;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($log)
+    public function __construct($user_id, $log_entry)
     {
-        $this->log = $log;
+        $this->user_id = $user_id;
+        $this->log_entry = $log_entry;
     }
 
     /**
